@@ -70,7 +70,6 @@ async def download_pic(img_id: str, current_user: User = Depends(get_current_use
 		- Streaming File Response
 	'''
 	img_metadata = get_img_metadata(current_user.username, img_id)
-	print(img_metadata)
 	if img_metadata is None:
 		raise HTTPException(
 			status_code = status.HTTP_400_BAD_REQUEST,

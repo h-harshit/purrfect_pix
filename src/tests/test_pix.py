@@ -51,7 +51,6 @@ def test_download_pic():
 	}
 
 	img_id = get_one_img_id()
-	print(img_id)
 
 	response = client.get(f"/api/v1/pix/file/download/{img_id}", headers=headers)
 
